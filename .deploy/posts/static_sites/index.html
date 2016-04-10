@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Choosing a Static Site Generator | Cactus</title>
+	<link rel="shortcut icon" href="/static/images/favicon.ico">	
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link rel="alternate" type="application/rss+xml" title="My Blog Feed" href="/rss.xml">
+</head>
+
+
+<body>
+	
+
+<section id="wrapper" class="group">
+	<header id="header">
+		<a id="title" href="../blogposts.html">Blog</a> <a class="right" href="../about.html">About</a> <a class="right" href="/">Landing</a>
+	</header>
+
+	<article class="post">
+		<header>
+			<h1>Choosing a Static Site Generator</h1>
+			<h2 class="headline">Beyond Jekyll </h2>
+		</header>
+		<section id="post-body">
+			
+
+<p>While static sites are all about the front-end, and offer the promise of allowing a developer to focus exclusively on css, javascript and html, it seems that many expect a certain amount of familiarity with whatever language they were built in and the tool-chain around said language. </p>
+
+<p>While I know Markdown (it takes about half an hour to learn) and have used YAML (it takes about two minutes to learn), and am comfortable on Command Line, for tools that make simple, database-free websites, many static site generators are overly-complex to set up. While static sites themselves obviously have <em>no backend code</em>, many generators do require a basic understanding of whatever language they were written in. 
+The tutorial for the Nanoc generator, for instance, recommends beginners take a Ruby tutorial before continuing. Taking a tutorial in a backend language in order to deliver some plain html pages is pretty bizarre. </p>
+
+<p>It was for this reason that I was seriously tempted by Cactus, which promised to be the simplest option, but from looking at the github commits, it looks like its no longer a maintained project. 
+The Cactus site states. Its definitely still a good choice for designers who want to hand-code a site with html and css but don't want to deal with a complicated configuration process (which, to be honest, could almost describe myself). It's also a good choice for anybody in a rush to get a blog up quickly (the default styling is pretty nice). If your not-overly technical and just want a blog, however, maybe try Ghost?  </p>
+
+<p>Gulp has overtaken Grunt as the build tool of choice. With Many static site generators you don't have to bother with either. I always find setting up Gulp a tedious, laborious and annoying task, so this is pretty cool. </p>
+
+<p>For a relative-newcomer to web-development, the sheer amount of choice in tools is actually somewhat off-putting. </p>
+
+<p>My criteria for picking a static-site generator tool are pretty simple:-
+* Is it written in a language I know (in my case, JavaScript and PHP)
+* Is it actively maintained
+* How good is the documentation
+* How active is the community
+* A lot of static site generators are geared specifically for blogging. Personally Is it designed to make more than a blog (personally I would like to make small portfolio websites using one)
+* How many plug-ings and themes are available</p>
+
+<p>Learning a new templating-system may not be the hardest thing in the world, but the sheer variety is still somewhat overwhelming. </p>
+
+<p>But you'll probably just feel pretty-attached to whatever it is you happen to get used to. </p>
+
+<p>I am somewhat suprised by the fast-rising popularity of Hugo, seeing as few people write Go, so the templating will be new to anyone that uses it. Many of the sites made with it and some of the prebuilt-themes look really nice. </p>
+
+<h3>Templates</h3>
+
+<p>Most of the time people will choose a framework or a CMS, and simply adopt whatever templating language is the default. Some frameworks and static site generators give you flexibility in using alternatives, many give you no choice but to use the default. Seeing as most static site generators are doing exactly the same task, the templating engine becomes rather key in the consideration (whereas frameworks and CMS's have plenty of other things to consider). As such, I'll talk a little about them here. </p>
+
+<p>The template system of the Django Python framework has heavily influenced Jinja2 (also for Python) and Twig (for PHP), both of which were written by the same guy, Armin Ronacher. Nunjucks for JavaScript is itself heavily influenced by Jinja2. Swig (JavaScript) and Liquid (Ruby) have also adopted a similar syntax. Swig is no longer maintained, while Nunjucks is developed by Mozilla, making it the clear choice of the two. It's relatively easy to move between any of these, which makes learning one of them a good investment of time. These are the ones I opt for in my own work. </p>
+
+<p>Of the other choices, Handlebars.js from Yehuda Katz, creator of the Ember framework, is a popular choice. We wrote Handlebars because we loved Mustache’s approach to “logic-less templating” in general but had a rough time dealing with the hoops you had to jump through to use global helpers and the lack of support for accessing variables further up the template’s call stack. </p>
+
+<p>Available in Ruby, JavaScript, Python, Erlang, node.js, PHP, Perl, Perl6, Objective-C, Java, C#/.NET, Android, C++, Go, Lua, ooc, ActionScript, ColdFusion, Scala, Clojure, Fantom, CoffeeScript, D, Haskell, XQuery, ASP, Io, Dart, Haxe, Delphi, Racket, Rust, OCaml, Swift, Bash, Julia, R, Crystal, and for Common Lisp</p>
+
+<p>Download Emmet for your text editor. Congratulations - you can now write full-blown proper HTML as fast as somebody can write Slim, Jade or Haml. Emmet makes writing HTML super-fast, but also reassuringly familiar. If you have auto-completion enabled in your text-editor, and can find the tab button on your keyboard, then the terseness of something like Haml really shouldn't be a draw. </p>
+
+<h3>DocPad</h3>
+
+<p>DocPad is written in CoffeeScript </p>
+
+<h3>Roots</h3>
+
+<p>Let's face it, we're web developers - we stare at a computer all day and as such we can type at a decent pace. Sacrificing legibility for the sake of eliminating some extra characters seems like a bad trade-off. Many tools seem to be solving a problem that isn't a problem - as such I don't use Stylus (a tool that eliminates the "problem" of braces and semi-colons). 
+I don't know who in their right-mind would want to use Coffeescript. 
+Roots seems very much built for a a particular toolchain of Jade, Coffeescript and Stylus, and so for me is easily discounted. </p>
+
+<h3>Sculpin</h3>
+
+<p>Sculpin seems to be the only serious choice for people that want something written in PHP. While PHP is the most popular language of the web, its static site generators are pretty far behind in terms of popularity (measured via Github stars). Personally I had technical issues to do with running PHP7 while a certain Sculpin dependency was using what has become a reserved word. After looking through the list of sites made with it, it's fair to say that few of them are particularly big or impressive. I'd still like to give it a proper try... </p>
+
+<h3>Cactus</h3>
+
+<p>There's too little of a community to ask questions of. It's to geared towards deploying only with AWS. The integration with Git seems pretty difficult. The documentation is middling. Its <em>incredibly easy</em> to get started with but I certainly wouldn't recommend it. </p>
+
+ 
+		</section>
+		
+		<footer id="post-meta" class="clearfix">
+			<div><span>Posted on </span> Apr 6</div>
+			<div><span>Written by</span> Oliver Williams</div>
+
+			<section id="sharing">
+				<a class="twitter" href="https://twitter.com/share"><span class="icon-twitter-circled"></span></a>
+
+				<a class="facebook" href="#" 
+				  onclick="
+				    window.open(
+				      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+				      'facebook-share-dialog', 
+				      'width=626,height=436'); 
+				    return false;"><span class="icon-facebook-circled"></span> 
+				</a>
+
+			</section> 
+		</footer> 
+	</article>
+
+	<footer>
+	<nav id="post-nav">
+		<span class="prev">
+			
+				<a href='/posts/online_learning.html'>
+					<span class="arrow">&larr;</span> What is the best online resource for learning web development?
+				</a>
+			
+		</span>
+		
+
+		<span class="next">
+			
+		</span>
+	</nav>
+	</footer>
+</section> 
+
+
+
+	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/static/js/main.js"></script>
+	
+</body>
+</html>
